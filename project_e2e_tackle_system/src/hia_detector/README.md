@@ -24,7 +24,16 @@
     Used to execute result summarization (= score calculation) at once for various settings.
 
 - `05b_summarize_detection_result_atira.py`
-    Used to evaluate data of `Automated Tackle Injury Risk Assessment ..`.
+    Used to evaluate data of `Automated Tackle Injury Risk Assessment in Contact-Based Sports - A Rugby Union Example`.
+    ```
+    @inproceedings{martin2021automated,
+        title={Automated tackle injury risk assessment in contact-based sports-a rugby union example},
+        author={Martin, Zubair and Hendricks, Sharief and Patel, Amir},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        pages={4594--4603},
+        year={2021}
+    }
+    ```
     Recommended to change directory in config.yaml.
 
 - Files required by each model is defined in `resource/model_info.yaml`
