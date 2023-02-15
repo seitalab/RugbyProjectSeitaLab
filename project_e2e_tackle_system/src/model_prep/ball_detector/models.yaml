@@ -1,0 +1,4 @@
+
+retina_r00: 
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_ball_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/detector/weight/base/retina/220128-121933/epoch_24.pth

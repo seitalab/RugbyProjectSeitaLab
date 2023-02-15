@@ -1,0 +1,355 @@
+
+v1:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220207-183420-mih-dgx2
+  # Eval loss: 0.1509 (F1: 0.494, AUC-ROC: 0.613, Recall: 0.000, Precision: 0.000)
+
+v2:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220207-222108-mih-dgx2
+  # Eval loss: 0.3405 (F1: 0.494, AUC-ROC: 0.605, Recall: 0.000, Precision: 0.000)
+v3:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220208-192600-mih-dgx2
+  # Eval loss: 0.3395 (F1: 0.576, AUC-ROC: 0.956, Recall: 0.895, Precision: 0.133)
+v4: 
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220208-203326-mih-dgx2
+  # Eval loss: 0.2380 (F1: 0.589, AUC-ROC: 0.908, Recall: 0.684, Precision: 0.143)
+v5: # pretrain=False
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220208-223440-mih-dgx2
+  # Eval loss: 0.5870 (F1: 0.450, AUC-ROC: 0.706, Recall: 0.632, Precision: 0.048)
+
+
+mc3_v1:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220208-134815-mih-dgx2
+  # Eval loss: 0.2965 (F1: 0.615, AUC-ROC: 0.958, Recall: 0.947, Precision: 0.171)
+
+# Grid search v220210
+# /export/work/users/nonaka/project/ecg_transformer/result/gs_result/grid_search/220210-213946/result.csv
+# 0,mc3_18,0.001,1.494,
+mc3_search1:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220210-213946-mih-dgx2
+  # Eval loss: 0.6794 (F1: 0.229, AUC-ROC: 0.583, Recall: 1.000, Precision: 0.032)
+
+# 1,mc3_18,0.0005,1.461,
+mc3_search2:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220210-224539-mih-dgx2
+  # Eval loss: 0.6639 (F1: 0.309, AUC-ROC: 0.745, Recall: 0.895, Precision: 0.035)
+
+# 2,mc3_18,0.0001,1.491,
+mc3_search3:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-001407-mih-dgx2
+  # Eval loss: 0.2808 (F1: 0.596, AUC-ROC: 0.964, Recall: 0.947, Precision: 0.153)
+
+#3,mc3_18,5e-05,1.34,
+mc3_search4:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-010553-mih-dgx2
+  # Eval loss: 0.3613 (F1: 0.569, AUC-ROC: 0.951, Recall: 0.947, Precision: 0.129)
+
+# 4,r2plus1d_18,0.001,1.494,
+r2p_search1:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-015746-mih-dgx2
+  # Eval loss: 0.7246 (F1: 0.024, AUC-ROC: 0.699, Recall: 1.000, Precision: 0.024)
+
+#5,r2plus1d_18,0.0005,1.36,
+r2p_search2:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-030118-mih-dgx2
+  # Eval loss: 0.4228 (F1: 0.549, AUC-ROC: 0.869, Recall: 0.737, Precision: 0.106)
+
+#6,r2plus1d_18,0.0001,1.222,
+r2p_search3:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-040439-mih-dgx2
+  # Eval loss: 0.2842 (F1: 0.552, AUC-ROC: 0.927, Recall: 0.842, Precision: 0.112)
+
+#7,r2plus1d_18,5e-05,1.587,
+r2p_search4:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-050756-mih-dgx2
+  # Eval loss: 0.2203 (F1: 0.628, AUC-ROC: 0.956, Recall: 0.789, Precision: 0.188)
+
+#8,r3d_18,0.001,1.502,
+r3d_search1:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-062914-mih-dgx2
+  # Eval loss: 0.7109 (F1: 0.024, AUC-ROC: 0.475, Recall: 1.000, Precision: 0.024)
+
+#9,r3d_18,0.0005,1.501,
+r3d_search2:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-074935-mih-dgx2
+  # Eval loss: 0.7042 (F1: 0.024, AUC-ROC: 0.528, Recall: 1.000, Precision: 0.024)
+
+#10,r3d_18,0.0001,1.467,
+r3d_search3:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-091042-mih-dgx2
+  # Eval loss: 0.5015 (F1: 0.543, AUC-ROC: 0.962, Recall: 1.000, Precision: 0.110)
+
+#11,r3d_18,5e-05,1.982,
+r3d_search4:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-102432-mih-dgx2
+  # Eval loss: 0.1617 (F1: 0.611, AUC-ROC: 0.917, Recall: 0.526, Precision: 0.172)
+
+# Grid search v220211
+# /export/work/users/nonaka/project/ecg_transformer/result/gs_result/grid_search/220211-201525/tmp.csv
+# 0,mc3_18,0.0001,adam,1.491
+mc3_r2_search01:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-201525-mih-dgx2
+  # Eval loss: 0.2808 (F1: 0.596, AUC-ROC: 0.964, Recall: 0.947, Precision: 0.153)
+
+# 1,mc3_18,0.0001,sgd,1.447,
+mc3_r2_search02:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-210739-mih-dgx2
+  # Eval loss: 0.5640 (F1: 0.486, AUC-ROC: 0.810, Recall: 0.684, Precision: 0.064)
+
+# 2,mc3_18,0.0001,adamw,1.045,
+mc3_r2_search03:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-220703-mih-dgx2
+  # Eval loss: 0.2890 (F1: 0.617, AUC-ROC: 0.941, Recall: 0.895, Precision: 0.173)
+
+# 3,mc3_18,0.0001,radam,1.289,
+mc3_r2_search04:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-232854-mih-dgx2
+  # Eval loss: 0.3799 (F1: 0.562, AUC-ROC: 0.942, Recall: 0.947, Precision: 0.122)
+
+# 4,mc3_18,7.5e-05,adam,1.488,
+mc3_r2_search05:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-002102-mih-dgx2
+  # Eval loss: 0.3207 (F1: 0.591, AUC-ROC: 0.963, Recall: 0.947, Precision: 0.148)
+
+# 5,mc3_18,7.5e-05,sgd,1.433,
+mc3_r2_search06:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-011303-mih-dgx2
+  # Eval loss: 0.6723 (F1: 0.392, AUC-ROC: 0.785, Recall: 0.842, Precision: 0.044)
+
+# 6,mc3_18,7.5e-05,adamw,1.143,
+mc3_r2_search07:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-021229-mih-dgx2
+  # Eval loss: 0.3937 (F1: 0.559, AUC-ROC: 0.930, Recall: 0.895, Precision: 0.119)
+
+# 7,mc3_18,7.5e-05,radam,1.397,
+mc3_r2_search08:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-033419-mih-dgx2
+  # Eval loss: 0.3231 (F1: 0.580, AUC-ROC: 0.939, Recall: 0.895, Precision: 0.137)
+
+# 8,mc3_18,5e-05,adam,1.34,
+mc3_r2_search09:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-042628-mih-dgx2
+  # Eval loss: 0.3613 (F1: 0.569, AUC-ROC: 0.951, Recall: 0.947, Precision: 0.129)
+
+# 9,mc3_18,5e-05,sgd,1.432,
+mc3_r2_search10:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-051835-mih-dgx2
+  # Eval loss: 0.5788 (F1: 0.482, AUC-ROC: 0.822, Recall: 0.789, Precision: 0.067)
+
+# 10,mc3_18,5e-05,adamw,1.403,
+mc3_r2_search11:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-063251-mih-dgx2
+  # Eval loss: 0.3640 (F1: 0.570, AUC-ROC: 0.952, Recall: 0.947, Precision: 0.129)
+
+# 11,mc3_18,5e-05,radam,1.571,
+mc3_r2_search12:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-072500-mih-dgx2
+  # Eval loss: 0.2730 (F1: 0.613, AUC-ROC: 0.924, Recall: 0.895, Precision: 0.170)
+
+# 12,mc3_18,2.5e-05,adam,1.628,
+mc3_r2_search13:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-081711-mih-dgx2
+  # Eval loss: 0.2816 (F1: 0.606, AUC-ROC: 0.938, Recall: 0.895, Precision: 0.162)
+
+# 13,mc3_18,2.5e-05,sgd,1.41,
+mc3_r2_search14:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-090919-mih-dgx2
+  # Eval loss: 0.7089 (F1: 0.352, AUC-ROC: 0.800, Recall: 0.842, Precision: 0.038)
+
+# 14,mc3_18,2.5e-05,adamw,1.606,
+mc3_r2_search15:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-103833-mih-dgx2
+  # Eval loss: 0.2870 (F1: 0.601, AUC-ROC: 0.939, Recall: 0.895, Precision: 0.157)
+
+# 15,mc3_18,2.5e-05,radam,1.297,
+mc3_r2_search16:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-113042-mih-dgx2
+  # Eval loss: 0.3529 (F1: 0.577, AUC-ROC: 0.949, Recall: 0.947, Precision: 0.135)
+
+# 16,mc3_18,1e-05,adam,1.394,
+mc3_r2_search17:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-125239-mih-dgx2
+  # Eval loss: 0.3401 (F1: 0.597, AUC-ROC: 0.941, Recall: 0.947, Precision: 0.154)
+
+# 17,mc3_18,1e-05,sgd,1.45,
+mc3_r2_search18:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-141433-mih-dgx2
+  # Eval loss: 0.8801 (F1: 0.196, AUC-ROC: 0.757, Recall: 0.895, Precision: 0.027)
+
+# 18,mc3_18,1e-05,adamw,1.415,
+mc3_r2_search19:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-171255-mih-dgx2
+  # Eval loss: 0.3333 (F1: 0.597, AUC-ROC: 0.941, Recall: 0.947, Precision: 0.154)
+
+# 19,mc3_18,1e-05,radam,1.355,
+mc3_r2_search20:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-183452-mih-dgx2
+  # Eval loss: 0.6082 (F1: 0.432, AUC-ROC: 0.850, Recall: 0.842, Precision: 0.053)
+
+# 20,r2plus1d_18,0.0001,adam,1.449,
+r2p_r2_search01:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-192703-mih-dgx2
+  # Eval loss: 0.2724 (F1: 0.616, AUC-ROC: 0.950, Recall: 0.947, Precision: 0.173)
+
+# 21,r2plus1d_18,0.0001,sgd,1.672,
+r2p_r2_search02:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-204923-mih-dgx2
+  # Eval loss: 0.4677 (F1: 0.476, AUC-ROC: 0.525, Recall: 0.053, Precision: 0.012)
+
+# 22,r2plus1d_18,0.0001,adamw,1.249,
+r2p_r2_search03:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-215251-mih-dgx2
+  # Eval loss: 0.2792 (F1: 0.557, AUC-ROC: 0.915, Recall: 0.737, Precision: 0.113)
+
+# 23,r2plus1d_18,0.0001,radam,1.683,
+r2p_r2_search04:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-225635-mih-dgx2
+  # Eval loss: 0.1907 (F1: 0.649, AUC-ROC: 0.963, Recall: 0.842, Precision: 0.213)
+  # Eval (valid set) loss: 0.2014 (F1: 0.621, AUC-ROC: 0.870, Recall: 0.542, Precision: 0.194)
+
+# 24,r2plus1d_18,7.5e-05,adam,1.285,
+r2p_r2_search05:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-001841-mih-dgx2
+  # Eval loss: 0.2546 (F1: 0.583, AUC-ROC: 0.948, Recall: 0.895, Precision: 0.139)
+
+# 25,r2plus1d_18,7.5e-05,sgd,1.658,
+r2p_r2_search06:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-012223-mih-dgx2
+  # Eval loss: 0.4833 (F1: 0.483, AUC-ROC: 0.514, Recall: 0.105, Precision: 0.023)
+
+# 26,r2plus1d_18,7.5e-05,adamw,1.628,
+r2p_r2_search07:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-022550-mih-dgx2
+  # Eval loss: 0.2375 (F1: 0.639, AUC-ROC: 0.938, Recall: 0.895, Precision: 0.200)
+  # Eval (valid) loss: 0.2114 (F1: 0.623, AUC-ROC: 0.885, Recall: 0.583, Precision: 0.194)
+
+# 27,r2plus1d_18,7.5e-05,radam,1.708,
+r2p_r2_search08:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-034742-mih-dgx2
+  # Eval loss: 0.1723 (F1: 0.643, AUC-ROC: 0.932, Recall: 0.632, Precision: 0.214)
+  # Eval (valid) loss: 0.1834 (F1: 0.619, AUC-ROC: 0.841, Recall: 0.417, Precision: 0.204)
+
+# 28,r2plus1d_18,5e-05,adam,1.566,
+r2p_r2_search09:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-045133-mih-dgx2
+  # Eval loss: 0.2062 (F1: 0.630, AUC-ROC: 0.946, Recall: 0.789, Precision: 0.190)
+
+# 29,r2plus1d_18,5e-05,sgd,1.644,
+r2p_r2_search10:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-061327-mih-dgx2
+  # Eval loss: 0.5001 (F1: 0.476, AUC-ROC: 0.504, Recall: 0.105, Precision: 0.020)
+
+# 30,r2plus1d_18,5e-05,adamw,1.896,
+r2p_r2_search11:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-071656-mih-dgx2
+  # Eval loss: 0.1732 (F1: 0.632, AUC-ROC: 0.949, Recall: 0.789, Precision: 0.192)
+
+# 31,r2plus1d_18,5e-05,radam,1.314,
+r2p_r2_search12:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-082041-mih-dgx2
+  # Eval loss: 0.2681 (F1: 0.619, AUC-ROC: 0.933, Recall: 0.842, Precision: 0.176)
+
+# 32,r2plus1d_18,2.5e-05,adam,1.585,
+r2p_r2_search13:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-094246-mih-dgx2
+  # Eval loss: 0.1865 (F1: 0.639, AUC-ROC: 0.943, Recall: 0.737, Precision: 0.203)
+
+# 33,r2plus1d_18,2.5e-05,sgd,1.63,
+r2p_r2_search14:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-104628-mih-dgx2
+
+
+# 34,r2plus1d_18,2.5e-05,adamw,1.337,
+r2p_r2_search15:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-114955-mih-dgx2
+  # Eval loss: 0.2388 (F1: 0.614, AUC-ROC: 0.938, Recall: 0.842, Precision: 0.170)
+
+# 35,r2plus1d_18,2.5e-05,radam,1.246,
+r2p_r2_search16:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-131150-mih-dgx2
+  # Eval loss: 0.2623 (F1: 0.594, AUC-ROC: 0.928, Recall: 0.842, Precision: 0.150)
+
+# 36,r2plus1d_18,1e-05,adam,1.674,
+r2p_r2_search17:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-143355-mih-dgx2
+  # Eval loss: 0.1886 (F1: 0.648, AUC-ROC: 0.923, Recall: 0.632, Precision: 0.222)
+
+# 37,r2plus1d_18,1e-05,sgd,1.621,
+r2p_r2_search18:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-155546-mih-dgx2
+
+
+# 38,r2plus1d_18,1e-05,adamw,1.709,
+r2p_r2_search19:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-165913-mih-dgx2
+  # Eval loss: 0.1814 (F1: 0.659, AUC-ROC: 0.925, Recall: 0.632, Precision: 0.240)
+
+# 39,r2plus1d_18,1e-05,radam,1.701,
+r2p_r2_search20:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-182105-mih-dgx2
+  # Eval loss: 0.3665 (F1: 0.516, AUC-ROC: 0.725, Recall: 0.105, Precision: 0.050)
+
+
+# 40,r3d_18,0.0001,adam,1.467,
+r3d_r2_search01:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-192449-mih-dgx2
+  # Eval loss: 0.5015 (F1: 0.543, AUC-ROC: 0.962, Recall: 1.000, Precision: 0.110)
+
+# 41,r3d_18,0.0001,sgd,1.781,
+r3d_r2_search02:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-203905-mih-dgx2
+  # Eval loss: 0.4603 (F1: 0.485, AUC-ROC: 0.261, Recall: 0.000, Precision: 0.000)
+
+# 42,r3d_18,0.0001,adamw,1.504,
+r3d_r2_search03:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-213633-mih-dgx2
+  # Eval loss: 0.2703 (F1: 0.584, AUC-ROC: 0.931, Recall: 0.789, Precision: 0.139)
+
+# 43,r3d_18,0.0001,radam,1.831,
+r3d_r2_search04:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220213-232348-mih-dgx2
+  # Eval loss: 0.1667 (F1: 0.615, AUC-ROC: 0.932, Recall: 0.632, Precision: 0.174)
+
+# 44,r3d_18,7.5e-05,adam,2.137,
+r3d_r2_search05:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-003814-mih-dgx2
+  # Eval loss: 0.1496 (F1: 0.652, AUC-ROC: 0.946, Recall: 0.684, Precision: 0.224)
+
+# 45,r3d_18,7.5e-05,sgd,1.762,
+r3d_r2_search06:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-015228-mih-dgx2
+
+
+# 46,r3d_18,7.5e-05,adamw,1.925,
+r3d_r2_search07:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-025814-mih-dgx2
+  # Eval loss: 0.1949 (F1: 0.629, AUC-ROC: 0.950, Recall: 0.842, Precision: 0.188)
+
+# 47,r3d_18,7.5e-05,radam,1.48,
+r3d_r2_search08:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-041233-mih-dgx2
+  # Eval loss: 0.4962 (F1: 0.529, AUC-ROC: 0.901, Recall: 0.789, Precision: 0.093)
+
+# 48,r3d_18,5e-05,adam,1.982,
+r3d_r2_search09:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-060002-mih-dgx2
+  # Eval loss: 0.1617 (F1: 0.611, AUC-ROC: 0.917, Recall: 0.526, Precision: 0.172)
+
+# 49,r3d_18,5e-05,sgd,1.743,
+r3d_r2_search10:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-071430-mih-dgx2
+  # Eval loss: 0.4786 (F1: 0.499, AUC-ROC: 0.276, Recall: 0.053, Precision: 0.026)
+
+# 50,r3d_18,5e-05,adamw,2.02,
+r3d_r2_search11:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-082020-mih-dgx2
+  # Eval loss: 0.1734 (F1: 0.586, AUC-ROC: 0.905, Recall: 0.474, Precision: 0.141)
+
+# 51,r3d_18,5e-05,radam,1.805,
+r3d_r2_search12:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-093441-mih-dgx2
+  # Eval loss: 0.2411 (F1: 0.605, AUC-ROC: 0.860, Recall: 0.684, Precision: 0.160)]
+
+# 52,r3d_18,2.5e-05,adam,2.291,
+r3d_r2_search13:
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-112217-mih-dgx2
+  # Eval loss: 0.1578 (F1: 0.559, AUC-ROC: 0.852, Recall: 0.211, Precision: 0.114)

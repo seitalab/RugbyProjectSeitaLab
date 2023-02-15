@@ -1,0 +1,71 @@
+
+# retina_addv2 => retinanet trained with manually labeled additional data using tackle detector retina_r10 as an base model.
+retina_addv2_lr1e-4:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220201-170638
+
+retina_addv2_lr5e-5:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220201-183052
+
+retina_addv2_lr2.5e-5:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220201-195506
+
+retina_addv2_lr1e-5:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220201-211918
+
+retina_addv2_lr5e-6:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220204-171020
+
+retina_addv2_lr2.5e-6:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220204-183457
+
+retina_addv2_lr1e-6:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220204-195912
+
+
+# retina_add => retinanet trained with manually labeled additional data using model pretrained with mscoco dataset.
+retina_add_lr5e-4:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220131-162009
+
+retina_add_lr2.5e-4:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220131-182553
+
+retina_add_lr1e-4:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220131-203224
+
+retina_add_lr5e-5:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220131-223752
+
+retina_add_lr2.5e-5:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/add_nframe-000100/retina/220201-004431
+
+retina_r00: 
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_00/retina/220124-125624/epoch_30.pth
+
+retina_r01: 
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_01/retina/220124-114703/epoch_22.pth
+
+retina_r05: 
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_05/retina/220121-135006/epoch_32.pth
+
+retina_r10: 
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_10/retina/220124-095230/epoch_24.pth
+
+retina_old:
+  cfgfile: cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle_base.py
+  ckptfile: /export/work/users/nonaka/project/sports/mmlab/retina/211210-104505/epoch_25.pth

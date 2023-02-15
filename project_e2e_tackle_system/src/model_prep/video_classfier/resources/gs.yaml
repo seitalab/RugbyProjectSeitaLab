@@ -1,0 +1,31 @@
+task: gs-v220211
+seed: 1
+
+base:
+
+  ep: 250
+  bs: 64
+
+  eval_every: 5
+  patience: 5
+  optim_patience: 5
+  weight_decay: 0.01
+  num_workers: 39
+
+
+search_space:
+  backbone: 
+    - mc3_18
+    - r2plus1d_18
+    - r3d_18
+  lr:
+    - 0.0001
+    - 0.000075
+    - 0.00005
+    - 0.000025
+    - 0.00001
+  optim:
+    - adam
+    - sgd
+    - adamw
+    - radam
