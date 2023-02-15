@@ -3,4 +3,4 @@
 
 ## End-to-End High-Risk Tackle Detection System for Rugby
 
-`e2e_tackle_system`
+`project_e2e_tackle_system`
