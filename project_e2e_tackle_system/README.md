@@ -21,4 +21,16 @@ Contains code to train tackle frame selection model (`video_classifier/`) and ta
 
 To train model, `python run_train.py` at each directory.
 
+## Citation
 
+End-to-End High-Risk Tackle Detection System for Rugby
+
+```
+@inproceedings{nonaka2022end,
+  title={End-to-End High-Risk Tackle Detection System for Rugby},
+  author={Nonaka, Naoki and Fujihira, Ryo and Nishio, Monami and Murakami, Hidetaka and Tajima, Takuya and Yamada, Mutsuo and Maeda, Akira and Seita, Jun},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3550--3559},
+  year={2022}
+}
+```
