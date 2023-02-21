@@ -1,0 +1,218 @@
+
+hia_detector:
+
+  data_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system
+  bbox_threshold: 0.5
+  pose_threshold: 0.35
+
+  target_video:
+    save_loc: dump_v2/tackle_video
+
+  tackle_frame:
+    max_frame: 100000
+    eval_every: 5
+    save_loc: dump_v2/tackle_bbox
+  
+  ball_frame:
+    save_loc: dump_v2/ball_frame
+
+  pose_detect:
+    save_loc: dump_v2/frame_pose
+  
+  tackle_pose_extract:
+    save_loc: dump_v2/tackle_pose
+
+  tackle_classifier:
+    save_loc: dump_v2/tackle_clf
+
+  summary:
+    save_loc: dump_v2/summary
+
+  trained_classifier:
+    naive_bayes: ../../asset/nb_nishio.pkl
+
+  manual_label_csv: /export/work/data/osaka_rugby/work/fujihira/hia_detect_system/is_tackle_csv
+  manual_poseidx_csv: /export/work/data/osaka_rugby/work/fujihira/hia_detect_system/pose_extraction_csv
+  manual_poselabel_src: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/frame_pose_check_ct
+
+tackle_detector:
+
+  src_data_loc: /export/work/data/osaka_rugby/work/event
+
+  src_video:
+    video_root: /export/work/data/osaka_rugby
+    video_id_csv: ../../../asset/VideoID.csv
+    
+  csv_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/csvfiles
+  tackle_listfile: master.csv
+
+  image_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/tackle_frame_image
+
+  valid_ratio: 0.2
+  random_frame_ratio: 0
+
+  datarepo:
+    root: /home/nonaka/git/rugby_pj/osaka-rugby-dataset
+    event_list_csv:
+      hia_tackle: data/event/HIAtackle.csv
+      nonhia_tackle: data/event/nonHIAtackle_nishio.csv
+    train_test_split:
+      train: task/master/train_videoId_with_HIAtackle_frame.csv
+      test: task/master/test_videoId_with_HIAtackle_frame.csv
+    
+  detector_train:
+    seed: 1423627750
+    image_data_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/tackle_frame_image
+    model_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight
+    gs_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/gs_result
+    mode: 
+      # type: random
+      # random_frame_ratio: 0 # temporal; must be same value with L42
+      type: labeled
+      num_frame_per_video: 100
+    criterion: bbox_mAP
+
+    result_eval:
+      result_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/test_result
+      columns:
+        - filename
+        - gt_bbox
+        - num_bbox
+        - best_iou
+        - avg_iou
+        - top_bbox_iou
+      threshold: 0.5
+
+    utils:
+      GT_COLOR: [255, 255, 255] # White
+      # GT_COLOR_class1: (0, 0, 255)     # Red
+      BBOX_COLOR: [0, 0, 255]   # Blue
+      # BBOX_COLOR_class1: (255, 255, 0) # Yellow
+      TEXT_COLOR: [25, 25, 25]
+      TEXT_BACK_COLOR: [255, 255, 255]
+      thickness: 7
+
+ball_detector:
+  src_data_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/ball_detection
+  processed_data_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/processed
+  train_size: 0.6 # train: valid: test = 6: 2: 2
+  
+  errors:
+    fix:
+      # train
+      - 57 # Overlapped bbox.
+      - 92
+      - 128
+      - 136
+      - 139
+      - 208
+      - 235
+      # valid
+      - 66
+      - 78
+      - 102
+      - 105
+      # test
+      - 67
+      - 90
+      - 99
+    skip:
+      # train
+      - 74
+      - 86
+      - 149
+      # valid
+      - 147
+      # test
+      - 85
+      - 258
+
+  detector_train:
+    seed: 1423627750
+    image_data_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/processed
+    model_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/detector/weight
+    gs_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/detector/gs_result
+    mode: base # temporal; must be same value with L42
+
+    result_eval:
+      result_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/detector/test_result
+      columns:
+        - filename
+        - gt_bbox
+        - num_bbox
+        - best_iou
+        - avg_iou
+        - top_bbox_iou
+      threshold: 0.5
+    
+    utils:
+      GT_COLOR: [255, 255, 255] # White
+      BBOX_COLOR: [0, 0, 255]   # Blue
+      TEXT_COLOR: [25, 25, 25]
+      TEXT_BACK_COLOR: [255, 255, 255]
+      thickness: 7
+  
+additional_data_prep:
+
+  src_video:
+    video_root: /export/work/data/osaka_rugby
+    video_id_csv: ../../asset/VideoID.csv
+  
+  datarepo:
+    root: /home/nonaka/git/rugby_pj/osaka-rugby-dataset
+    train_test_split:
+      train: task/master/train_videoId_with_HIAtackle_frame.csv
+      test: task/master/test_videoId_with_HIAtackle_frame.csv
+  
+  num_frame_per_video: 100
+  image_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/additional_data/tackle
+  bbox_threshold: 0.5
+
+  video_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_data/tackle
+  n_video_frames: 50
+
+  manual_label_csv: filelist_v220130_fujihira.csv
+
+  all_frame_save_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/frame_check
+
+video_classifier:
+
+  data_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_data/tackle/nframe-000100/processed
+  save_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models
+  gs_result_loc: /export/work/users/nonaka/project/ecg_transformer/result/gs_result
+  eval_result_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/eval
+
+  manual_label_csv: filelist_v220130_fujihira.csv
+
+video_prep:
+
+  video_root: /export/work/data/osaka_rugby
+  video_id_csv: ../../asset/VideoID.csv
+  tackle_event_csv: ../../asset/tackle_event_for_test.csv
+  save_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_clips
+
+  clip_length: 1 # min
+  num_random_per_tackle: 1
+
+ATIRA:
+  data_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ATIRA_data/raw
+  save_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ATIRA_data/processed
+
+  label_row: Groud_Truth.4
+  n_last: 10
+
+center_track:
+
+  pose_frame_loc: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/frame_pose_check_ct
+
+eval_component:
+
+  data_root: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system
+
+  eval_clf: eval_component/video_clf
+  eval_pose: eval_component/pose_clf
+  eval_tackle: eval_component/tackle_clf
+  manual_label_csv: /export/work/data/osaka_rugby/work/fujihira/hia_detect_system/is_tackle_csv
+
+  trained_classifier:
+      naive_bayes: ../../asset/nb_nishio.pkl

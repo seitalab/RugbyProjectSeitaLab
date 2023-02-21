@@ -1,0 +1,64 @@
+
+tackle_detect:
+  retina:
+    config_file: ./cfg/detect/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle.py
+    checkpoint_file: /export/work/users/nonaka/project/sports/mmlab/retina/211210-104505/epoch_25.pth
+
+  retina_v2:
+    config_file: ./cfg/detect/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle.py
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_05/retina/220121-135006/epoch_32.pth
+
+  retina_v3:
+    config_file: ./cfg/detect/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle.py
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_10/retina/220124-095230/epoch_24.pth
+
+  retina_v4:
+    config_file: ./cfg/detect/retina/retinanet_r50_fpn_mstrain_3x_coco_tackle.py
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/tackle_detector/detector/weight/random_ratio_01/retina/220124-114703/epoch_22.pth
+
+  detr: 
+    config_file: ./cfg/detect/detr/detr_r50_8x2_150e_coco.py
+    checkpoint_file: /export/work/users/nonaka/project/sports/mmlab/detr/211210-114154/epoch_41.pth
+
+
+pose_detect:
+  # Not used.
+  hrnet-whole:
+    config_file: ../../sandbox/hrnet_w32_coco_wholebody_256x192.py
+    checkpoint_file: ../../sandbox/hrnet_w32_coco_wholebody_256x192-853765cd_20200918.pth
+  
+  res50:
+    config_file: ./cfg/pose/coco/res50_coco_512x512.py
+    checkpoint_file: ./ckpt/res50_coco_512x512-5521bead_20200816.pth
+
+  hrnet:
+    config_file: ./cfg/pose/coco/hrnet_w32_coco_512x512.py
+    checkpoint_file: ./ckpt/hrnet_w32_coco_512x512-bcb8c247_20200816.pth
+
+video_classifier:
+
+  trial:
+    model: r2plus1d_18
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220207-183420-mih-dgx2
+
+  mc3_v1:
+    model: mc3_18
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220208-134815-mih-dgx2
+
+  mc3_r2_search03:
+    model: mc3_18
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220211-220703-mih-dgx2
+
+  r2p_r2_search04:
+    model: r2plus1d_18
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220212-225635-mih-dgx2
+
+  r3d_r2_search05:
+    model: r3d_18
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/video_classifier/models/220214-003814-mih-dgx2
+
+ball_detect:
+
+  retina_ball_v1: 
+    config_file: ../model_prep/ball_detector/cfg/retina/retinanet_r50_fpn_mstrain_3x_coco_ball_base.py`
+    checkpoint_file: /export/work/data/osaka_rugby/work/nonaka/hia_detect_system/ball/detector/weight/base/retina/220128-121933/epoch_24.pth
